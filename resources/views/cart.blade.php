@@ -37,7 +37,7 @@
                                 <p class="cart_total_price">{{ number_format($product->subtotal,0,',','.')}} VND</p>
                             </td>
                             <td class="cart_delete">
-                                <form action="route{{'remove',$product->rowId}}" method="POST">
+                                <form action="{{ route('remove', $product->rowId) }}" method="POST">
                                 {{csrf_field()}}
                                 {{method_field('DELETE')}}
                                     <a class="cart_quantity_delete" href='{{url("gio-hang/remove",$product->rowId)}}'><i class="fa fa-times"></i></a>
