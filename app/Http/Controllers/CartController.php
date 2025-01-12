@@ -93,7 +93,7 @@ class CartController extends Controller
             $bill = new BillModel;
             $bill->cus_id = $customer->id; // ID khách hàng
             $bill->date_order = date('Y-m-d H:i:s'); // Ngày đặt hàng
-            $bill->total = str_replace(',', '', \Cart::total()); // Tổng tiền (loại bỏ dấu phẩy)
+            $bill->total = \Cart::subtotal(0, '', '');  // Tổng tiền (loại bỏ dấu phẩy)
             $bill->note = Request::get('note'); // Ghi chú hóa đơn
             $bill->save();
 

@@ -165,7 +165,7 @@
 
         
         
-<footer>
+<footer class="">
     <section class="footer">		
         <div class="footer">
             <div class="footer-left col-md-4">

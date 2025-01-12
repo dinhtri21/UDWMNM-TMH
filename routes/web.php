@@ -72,8 +72,6 @@ Route::get('manage/edit/update/{id}', 'manageProductsController@update')->name('
 Route::get('manage/destroy/{id}', 'manageProductsController@destroy')->name('destroy');
 
 
-
-
 //manager_search
 Route::get('manage/search', 'manageProductsController@search')->name('manage.search');
 //order_management
